@@ -68,7 +68,7 @@
             this.Label8.Font = new System.Drawing.Font("Arial Black", 19F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label8.Location = new System.Drawing.Point(71, 29);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(379, 37);
+            this.Label8.Size = new System.Drawing.Size(378, 37);
             this.Label8.TabIndex = 30;
             this.Label8.Text = "CADASTRO DE CLIENTES";
             // 
@@ -77,21 +77,21 @@
             this.txtEmail.Location = new System.Drawing.Point(192, 190);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(201, 20);
-            this.txtEmail.TabIndex = 29;
+            this.txtEmail.TabIndex = 4;
             // 
             // txtEndereco
             // 
             this.txtEndereco.Location = new System.Drawing.Point(237, 295);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(197, 20);
-            this.txtEndereco.TabIndex = 27;
+            this.txtEndereco.TabIndex = 6;
             // 
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(192, 164);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(201, 20);
-            this.txtTelefone.TabIndex = 26;
+            this.txtTelefone.TabIndex = 3;
             // 
             // Label7
             // 
@@ -143,7 +143,7 @@
             this.txtNome.Location = new System.Drawing.Point(192, 109);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(201, 20);
-            this.txtNome.TabIndex = 16;
+            this.txtNome.TabIndex = 1;
             // 
             // label5
             // 
@@ -165,14 +165,14 @@
             this.cbLogradouro.Location = new System.Drawing.Point(110, 295);
             this.cbLogradouro.Name = "cbLogradouro";
             this.cbLogradouro.Size = new System.Drawing.Size(121, 21);
-            this.cbLogradouro.TabIndex = 33;
+            this.cbLogradouro.TabIndex = 5;
             // 
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(161, 322);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(55, 20);
-            this.txtNumero.TabIndex = 34;
+            this.txtNumero.TabIndex = 7;
             // 
             // label6
             // 
@@ -197,7 +197,7 @@
             this.txtBairro.Location = new System.Drawing.Point(161, 348);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(153, 20);
-            this.txtBairro.TabIndex = 36;
+            this.txtBairro.TabIndex = 8;
             // 
             // label10
             // 
@@ -213,7 +213,7 @@
             this.txtCidade.Location = new System.Drawing.Point(161, 374);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(153, 20);
-            this.txtCidade.TabIndex = 38;
+            this.txtCidade.TabIndex = 9;
             // 
             // label11
             // 
@@ -259,7 +259,7 @@
             this.cbUF.Location = new System.Drawing.Point(161, 401);
             this.cbUF.Name = "cbUF";
             this.cbUF.Size = new System.Drawing.Size(81, 21);
-            this.cbUF.TabIndex = 41;
+            this.cbUF.TabIndex = 10;
             // 
             // txtCPF
             // 
@@ -267,7 +267,7 @@
             this.txtCPF.Mask = "009,009,009-09";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(138, 20);
-            this.txtCPF.TabIndex = 42;
+            this.txtCPF.TabIndex = 2;
             // 
             // CadastroCliente
             // 

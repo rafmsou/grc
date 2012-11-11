@@ -25,5 +25,10 @@ namespace GRC
         {
             new Produto().ShowDialog();
         }
+
+        private void btnPedido_Click(object sender, EventArgs e)
+        {
+            new CadastroPedido().ShowDialog();
+        }
     }
 }

@@ -10,8 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GRC</RootNamespace>
     <AssemblyName>WindowsFormsApplication3</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
@@ -50,13 +51,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -64,22 +65,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="GRC_Entities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GRC_Entities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Produto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produto.Designer.cs">
+      <DependentUpon>Produto.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TelaInicial.Designer.cs">
       <DependentUpon>TelaInicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cliente.Designer.cs">
-      <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastroCliente.cs">
       <SubType>Form</SubType>
@@ -92,12 +99,6 @@
     </Compile>
     <Compile Include="PesquisaCliente.Designer.cs">
       <DependentUpon>PesquisaCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Produto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Produto.Designer.cs">
-      <DependentUpon>Produto.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastroProduto.cs">
       <SubType>Form</SubType>
@@ -119,11 +120,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="TelaInicial.resx">
-      <DependentUpon>TelaInicial.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produto.resx">
+      <DependentUpon>Produto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaInicial.resx">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroCliente.resx">
       <DependentUpon>CadastroCliente.cs</DependentUpon>
@@ -133,9 +137,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroPedido.resx">
       <DependentUpon>CadastroPedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Produto.resx">
-      <DependentUpon>Produto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroProduto.resx">
       <DependentUpon>CadastroProduto.cs</DependentUpon>
@@ -158,6 +159,11 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>GRC_Entities.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="GRC_Entities.edmx.diagram">
+      <DependentUpon>GRC_Entities.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\GRCEntities.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -204,6 +210,9 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

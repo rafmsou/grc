@@ -155,7 +155,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIÇÃO;
         private System.Windows.Forms.DataGridViewTextBoxColumn QTDE;
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR;
-        private System.Windows.Forms.BindingSource gRCsqlDataSetBindingSource;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnImprimir;

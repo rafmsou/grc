@@ -32,6 +32,7 @@
             this.btnProduto = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnPedido = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Label1
@@ -74,16 +75,27 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "MENU";
             // 
-            // menu
+            // btnPedido
+            // 
+            this.btnPedido.Location = new System.Drawing.Point(42, 278);
+            this.btnPedido.Name = "btnPedido";
+            this.btnPedido.Size = new System.Drawing.Size(535, 76);
+            this.btnPedido.TabIndex = 10;
+            this.btnPedido.Text = "PEDIDO";
+            this.btnPedido.UseVisualStyleBackColor = true;
+            this.btnPedido.Click += new System.EventHandler(this.btnPedido_Click);
+            // 
+            // TelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 318);
+            this.ClientSize = new System.Drawing.Size(633, 415);
+            this.Controls.Add(this.btnPedido);
             this.Controls.Add(this.btnProduto);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Label1);
-            this.Name = "menu";
+            this.Name = "TelaInicial";
             this.Text = "TELA1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -96,6 +108,7 @@
         internal System.Windows.Forms.Button btnProduto;
         internal System.Windows.Forms.Button btnCliente;
         internal System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.Button btnPedido;
     }
 }
 
