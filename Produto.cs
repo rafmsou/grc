@@ -9,11 +9,21 @@ using System.Windows.Forms;
 
 namespace GRC
 {
-    public partial class Form7 : Form
+    public partial class Produto : Form
     {
-        public Form7()
+        public Produto()
         {
             InitializeComponent();
+        }
+
+        private void btnCadastraProduto_Click(object sender, EventArgs e)
+        {
+            new CadastroProduto().ShowDialog();
+        }
+
+        private void btnListaProduto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

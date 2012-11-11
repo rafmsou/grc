@@ -4,31 +4,31 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="GRC.Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+      <Schema Namespace="GRCModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="GRCModelStoreContainer">
-          <EntitySet Name="CLIENTE" EntityType="GRC.Model.Store.CLIENTE" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ENDERECO" EntityType="GRC.Model.Store.ENDERECO" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PEDIDO" EntityType="GRC.Model.Store.PEDIDO" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PEDIDO_ITEM" EntityType="GRC.Model.Store.PEDIDO_ITEM" store:Type="Tables" store:Schema="dbo" store:Name="PEDIDO_ITEM">
+          <EntitySet Name="CLIENTE" EntityType="GRCModel.Store.CLIENTE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ENDERECO" EntityType="GRCModel.Store.ENDERECO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PEDIDO" EntityType="GRCModel.Store.PEDIDO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PEDIDO_ITEM" EntityType="GRCModel.Store.PEDIDO_ITEM" store:Type="Tables" store:Schema="dbo" store:Name="PEDIDO_ITEM">
             <DefiningQuery>SELECT 
       [PEDIDO_ITEM].[CODIGO_PRODUTO] AS [CODIGO_PRODUTO], 
       [PEDIDO_ITEM].[CODIGO_PEDIDO] AS [CODIGO_PEDIDO]
       FROM [dbo].[PEDIDO_ITEM] AS [PEDIDO_ITEM]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="PRODUTO" EntityType="GRC.Model.Store.PRODUTO" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK_CLIENTE_ENDERECO" Association="GRC.Model.Store.FK_CLIENTE_ENDERECO">
+          <EntitySet Name="PRODUTO" EntityType="GRCModel.Store.PRODUTO" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_CLIENTE_ENDERECO" Association="GRCModel.Store.FK_CLIENTE_ENDERECO">
             <End Role="ENDERECO" EntitySet="ENDERECO" />
             <End Role="CLIENTE" EntitySet="CLIENTE" />
           </AssociationSet>
-          <AssociationSet Name="FK_PEDIDO_CLIENTE" Association="GRC.Model.Store.FK_PEDIDO_CLIENTE">
+          <AssociationSet Name="FK_PEDIDO_CLIENTE" Association="GRCModel.Store.FK_PEDIDO_CLIENTE">
             <End Role="CLIENTE" EntitySet="CLIENTE" />
             <End Role="PEDIDO" EntitySet="PEDIDO" />
           </AssociationSet>
-          <AssociationSet Name="FK_PEDIDO_ITEM_PEDIDO" Association="GRC.Model.Store.FK_PEDIDO_ITEM_PEDIDO">
+          <AssociationSet Name="FK_PEDIDO_ITEM_PEDIDO" Association="GRCModel.Store.FK_PEDIDO_ITEM_PEDIDO">
             <End Role="PEDIDO" EntitySet="PEDIDO" />
             <End Role="PEDIDO_ITEM" EntitySet="PEDIDO_ITEM" />
           </AssociationSet>
-          <AssociationSet Name="FK_PEDIDO_ITEM_PRODUTO" Association="GRC.Model.Store.FK_PEDIDO_ITEM_PRODUTO">
+          <AssociationSet Name="FK_PEDIDO_ITEM_PRODUTO" Association="GRCModel.Store.FK_PEDIDO_ITEM_PRODUTO">
             <End Role="PRODUTO" EntitySet="PRODUTO" />
             <End Role="PEDIDO_ITEM" EntitySet="PEDIDO_ITEM" />
           </AssociationSet>
@@ -37,7 +37,7 @@
           <Key>
             <PropertyRef Name="CODIGO" />
           </Key>
-          <Property Name="CODIGO" Type="int" Nullable="false" />
+          <Property Name="CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="NOME" Type="varchar" Nullable="false" MaxLength="200" />
           <Property Name="CPF" Type="bigint" Nullable="false" />
           <Property Name="TELEFONE" Type="varchar" Nullable="false" MaxLength="200" />
@@ -48,7 +48,7 @@
           <Key>
             <PropertyRef Name="CODIGO" />
           </Key>
-          <Property Name="CODIGO" Type="int" Nullable="false" />
+          <Property Name="CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="LOGRADOURO" Type="varchar" MaxLength="200" />
           <Property Name="NUMERO" Type="int" />
           <Property Name="BAIRRO" Type="varchar" MaxLength="200" />
@@ -59,7 +59,7 @@
           <Key>
             <PropertyRef Name="CODIGO" />
           </Key>
-          <Property Name="CODIGO" Type="int" Nullable="false" />
+          <Property Name="CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="CODIGO_CLIENTE" Type="int" Nullable="false" />
           <Property Name="DATA" Type="date" Nullable="false" />
         </EntityType>
@@ -78,13 +78,13 @@
           <Key>
             <PropertyRef Name="CODIGO" />
           </Key>
-          <Property Name="CODIGO" Type="int" Nullable="false" />
+          <Property Name="CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="DESCRICAO" Type="varchar" Nullable="false" MaxLength="200" />
           <Property Name="VALOR" Type="decimal" Nullable="false" Precision="8" Scale="2" />
         </EntityType>
         <Association Name="FK_CLIENTE_ENDERECO">
-          <End Role="ENDERECO" Type="GRC.Model.Store.ENDERECO" Multiplicity="1" />
-          <End Role="CLIENTE" Type="GRC.Model.Store.CLIENTE" Multiplicity="*" />
+          <End Role="ENDERECO" Type="GRCModel.Store.ENDERECO" Multiplicity="1" />
+          <End Role="CLIENTE" Type="GRCModel.Store.CLIENTE" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ENDERECO">
               <PropertyRef Name="CODIGO" />
@@ -95,8 +95,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PEDIDO_CLIENTE">
-          <End Role="CLIENTE" Type="GRC.Model.Store.CLIENTE" Multiplicity="1" />
-          <End Role="PEDIDO" Type="GRC.Model.Store.PEDIDO" Multiplicity="*" />
+          <End Role="CLIENTE" Type="GRCModel.Store.CLIENTE" Multiplicity="1" />
+          <End Role="PEDIDO" Type="GRCModel.Store.PEDIDO" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CLIENTE">
               <PropertyRef Name="CODIGO" />
@@ -107,8 +107,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PEDIDO_ITEM_PEDIDO">
-          <End Role="PEDIDO" Type="GRC.Model.Store.PEDIDO" Multiplicity="1" />
-          <End Role="PEDIDO_ITEM" Type="GRC.Model.Store.PEDIDO_ITEM" Multiplicity="*" />
+          <End Role="PEDIDO" Type="GRCModel.Store.PEDIDO" Multiplicity="1" />
+          <End Role="PEDIDO_ITEM" Type="GRCModel.Store.PEDIDO_ITEM" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PEDIDO">
               <PropertyRef Name="CODIGO" />
@@ -119,8 +119,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PEDIDO_ITEM_PRODUTO">
-          <End Role="PRODUTO" Type="GRC.Model.Store.PRODUTO" Multiplicity="1" />
-          <End Role="PEDIDO_ITEM" Type="GRC.Model.Store.PEDIDO_ITEM" Multiplicity="*" />
+          <End Role="PRODUTO" Type="GRCModel.Store.PRODUTO" Multiplicity="1" />
+          <End Role="PEDIDO_ITEM" Type="GRCModel.Store.PEDIDO_ITEM" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PRODUTO">
               <PropertyRef Name="CODIGO" />
@@ -130,75 +130,76 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="GRC.Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="GRCEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="CLIENTEs" EntityType="GRC.Model.CLIENTE" />
-          <EntitySet Name="ENDERECOes" EntityType="GRC.Model.ENDERECO" />
-          <EntitySet Name="PEDIDOes" EntityType="GRC.Model.PEDIDO" />
-          <EntitySet Name="PRODUTOes" EntityType="GRC.Model.PRODUTO" />
-          <AssociationSet Name="FK_CLIENTE_ENDERECO" Association="GRC.Model.FK_CLIENTE_ENDERECO">
-            <End Role="ENDERECO" EntitySet="ENDERECOes" />
-            <End Role="CLIENTE" EntitySet="CLIENTEs" />
+      <Schema Namespace="GRCModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="GRCEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CLIENTE" EntityType="GRCModel.CLIENTE" />
+          <EntitySet Name="ENDERECO" EntityType="GRCModel.ENDERECO" />
+          <EntitySet Name="PEDIDO" EntityType="GRCModel.PEDIDO" />
+          <EntitySet Name="PRODUTO" EntityType="GRCModel.PRODUTO" />
+          <AssociationSet Name="FK_CLIENTE_ENDERECO" Association="GRCModel.FK_CLIENTE_ENDERECO">
+            <End Role="ENDERECO" EntitySet="ENDERECO" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
           </AssociationSet>
-          <AssociationSet Name="FK_PEDIDO_CLIENTE" Association="GRC.Model.FK_PEDIDO_CLIENTE">
-            <End Role="CLIENTE" EntitySet="CLIENTEs" />
-            <End Role="PEDIDO" EntitySet="PEDIDOes" />
+          <AssociationSet Name="FK_PEDIDO_CLIENTE" Association="GRCModel.FK_PEDIDO_CLIENTE">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="PEDIDO" EntitySet="PEDIDO" />
           </AssociationSet>
-          <AssociationSet Name="PEDIDO_ITEM" Association="GRC.Model.PEDIDO_ITEM">
-            <End Role="PEDIDO" EntitySet="PEDIDOes" />
-            <End Role="PRODUTO" EntitySet="PRODUTOes" />
+          <AssociationSet Name="PEDIDO_ITEM" Association="GRCModel.PEDIDO_ITEM">
+            <End Role="PEDIDO" EntitySet="PEDIDO" />
+            <End Role="PRODUTO" EntitySet="PRODUTO" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="CLIENTE">
           <Key>
             <PropertyRef Name="CODIGO" />
           </Key>
-          <Property Name="CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NOME" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
           <Property Name="CPF" Type="Int64" Nullable="false" />
           <Property Name="TELEFONE" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
           <Property Name="CODIGO_ENDERECO" Type="Int32" Nullable="false" />
           <Property Name="EMAIL" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="ENDERECO" Relationship="GRC.Model.FK_CLIENTE_ENDERECO" FromRole="CLIENTE" ToRole="ENDERECO" />
-          <NavigationProperty Name="PEDIDOes" Relationship="GRC.Model.FK_PEDIDO_CLIENTE" FromRole="CLIENTE" ToRole="PEDIDO" />
+          <NavigationProperty Name="ENDERECO" Relationship="GRCModel.FK_CLIENTE_ENDERECO" FromRole="CLIENTE" ToRole="ENDERECO" />
+          <NavigationProperty Name="PEDIDO" Relationship="GRCModel.FK_PEDIDO_CLIENTE" FromRole="CLIENTE" ToRole="PEDIDO" />
         </EntityType>
         <EntityType Name="ENDERECO">
           <Key>
             <PropertyRef Name="CODIGO" />
           </Key>
-          <Property Name="CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="LOGRADOURO" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
           <Property Name="NUMERO" Type="Int32" />
           <Property Name="BAIRRO" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
           <Property Name="CIDADE" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
           <Property Name="ESTADO" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="CLIENTEs" Relationship="GRC.Model.FK_CLIENTE_ENDERECO" FromRole="ENDERECO" ToRole="CLIENTE" />
+          <NavigationProperty Name="CLIENTE" Relationship="GRCModel.FK_CLIENTE_ENDERECO" FromRole="ENDERECO" ToRole="CLIENTE" />
         </EntityType>
         <EntityType Name="PEDIDO">
           <Key>
             <PropertyRef Name="CODIGO" />
           </Key>
-          <Property Name="CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CODIGO_CLIENTE" Type="Int32" Nullable="false" />
           <Property Name="DATA" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="CLIENTE" Relationship="GRC.Model.FK_PEDIDO_CLIENTE" FromRole="PEDIDO" ToRole="CLIENTE" />
-          <NavigationProperty Name="PRODUTOes" Relationship="GRC.Model.PEDIDO_ITEM" FromRole="PEDIDO" ToRole="PRODUTO" />
+          <NavigationProperty Name="CLIENTE" Relationship="GRCModel.FK_PEDIDO_CLIENTE" FromRole="PEDIDO" ToRole="CLIENTE" />
+          <NavigationProperty Name="PRODUTO" Relationship="GRCModel.PEDIDO_ITEM" FromRole="PEDIDO" ToRole="PRODUTO" />
         </EntityType>
         <EntityType Name="PRODUTO">
           <Key>
             <PropertyRef Name="CODIGO" />
           </Key>
-          <Property Name="CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DESCRICAO" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
           <Property Name="VALOR" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
-          <NavigationProperty Name="PEDIDOes" Relationship="GRC.Model.PEDIDO_ITEM" FromRole="PRODUTO" ToRole="PEDIDO" />
+          <NavigationProperty Name="PEDIDO" Relationship="GRCModel.PEDIDO_ITEM" FromRole="PRODUTO" ToRole="PEDIDO" />
         </EntityType>
         <Association Name="FK_CLIENTE_ENDERECO">
-          <End Role="ENDERECO" Type="GRC.Model.ENDERECO" Multiplicity="1" />
-          <End Role="CLIENTE" Type="GRC.Model.CLIENTE" Multiplicity="*" />
+          <End Role="ENDERECO" Type="GRCModel.ENDERECO" Multiplicity="1" />
+          <End Role="CLIENTE" Type="GRCModel.CLIENTE" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ENDERECO">
               <PropertyRef Name="CODIGO" />
@@ -209,8 +210,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PEDIDO_CLIENTE">
-          <End Role="CLIENTE" Type="GRC.Model.CLIENTE" Multiplicity="1" />
-          <End Role="PEDIDO" Type="GRC.Model.PEDIDO" Multiplicity="*" />
+          <End Role="CLIENTE" Type="GRCModel.CLIENTE" Multiplicity="1" />
+          <End Role="PEDIDO" Type="GRCModel.PEDIDO" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CLIENTE">
               <PropertyRef Name="CODIGO" />
@@ -221,16 +222,16 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="PEDIDO_ITEM">
-          <End Role="PEDIDO" Type="GRC.Model.PEDIDO" Multiplicity="*" />
-          <End Role="PRODUTO" Type="GRC.Model.PRODUTO" Multiplicity="*" />
+          <End Role="PEDIDO" Type="GRCModel.PEDIDO" Multiplicity="*" />
+          <End Role="PRODUTO" Type="GRCModel.PRODUTO" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="GRCModelStoreContainer" CdmEntityContainer="GRCEntities">
-          <EntitySetMapping Name="CLIENTEs"><EntityTypeMapping TypeName="GRC.Model.CLIENTE"><MappingFragment StoreEntitySet="CLIENTE">
+        <EntityContainerMapping StorageEntityContainer="GRCModelStoreContainer" CdmEntityContainer="GRCEntities1">
+          <EntitySetMapping Name="CLIENTE"><EntityTypeMapping TypeName="GRCModel.CLIENTE"><MappingFragment StoreEntitySet="CLIENTE">
             <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
             <ScalarProperty Name="NOME" ColumnName="NOME" />
             <ScalarProperty Name="CPF" ColumnName="CPF" />
@@ -238,7 +239,7 @@
             <ScalarProperty Name="CODIGO_ENDERECO" ColumnName="CODIGO_ENDERECO" />
             <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="ENDERECOes"><EntityTypeMapping TypeName="GRC.Model.ENDERECO"><MappingFragment StoreEntitySet="ENDERECO">
+          <EntitySetMapping Name="ENDERECO"><EntityTypeMapping TypeName="GRCModel.ENDERECO"><MappingFragment StoreEntitySet="ENDERECO">
             <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
             <ScalarProperty Name="LOGRADOURO" ColumnName="LOGRADOURO" />
             <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
@@ -246,17 +247,17 @@
             <ScalarProperty Name="CIDADE" ColumnName="CIDADE" />
             <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="PEDIDOes"><EntityTypeMapping TypeName="GRC.Model.PEDIDO"><MappingFragment StoreEntitySet="PEDIDO">
+          <EntitySetMapping Name="PEDIDO"><EntityTypeMapping TypeName="GRCModel.PEDIDO"><MappingFragment StoreEntitySet="PEDIDO">
             <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
             <ScalarProperty Name="CODIGO_CLIENTE" ColumnName="CODIGO_CLIENTE" />
             <ScalarProperty Name="DATA" ColumnName="DATA" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="PRODUTOes"><EntityTypeMapping TypeName="GRC.Model.PRODUTO"><MappingFragment StoreEntitySet="PRODUTO">
+          <EntitySetMapping Name="PRODUTO"><EntityTypeMapping TypeName="GRCModel.PRODUTO"><MappingFragment StoreEntitySet="PRODUTO">
             <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
             <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
             <ScalarProperty Name="VALOR" ColumnName="VALOR" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <AssociationSetMapping Name="PEDIDO_ITEM" TypeName="GRC.Model.PEDIDO_ITEM" StoreEntitySet="PEDIDO_ITEM">
+          <AssociationSetMapping Name="PEDIDO_ITEM" TypeName="GRCModel.PEDIDO_ITEM" StoreEntitySet="PEDIDO_ITEM">
             <EndProperty Name="PEDIDO">
               <ScalarProperty Name="CODIGO" ColumnName="CODIGO_PEDIDO" />
             </EndProperty>
@@ -284,20 +285,20 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="GRC_Model">
-        <EntityTypeShape EntityType="GRC.Model.CLIENTE" Width="1.5" PointX="3" PointY="1" Height="2.5571907552083335" IsExpanded="true" />
-        <EntityTypeShape EntityType="GRC.Model.ENDERECO" Width="1.5" PointX="0.75" PointY="1" Height="2.3648893229166674" IsExpanded="true" />
-        <EntityTypeShape EntityType="GRC.Model.PEDIDO" Width="1.5" PointX="5.25" PointY="1.25" Height="1.9802864583333326" IsExpanded="true" />
-        <EntityTypeShape EntityType="GRC.Model.PRODUTO" Width="1.5" PointX="7.5" PointY="1.375" Height="1.7879850260416657" IsExpanded="true" />
-        <AssociationConnector Association="GRC.Model.FK_CLIENTE_ENDERECO" ManuallyRouted="false">
+      <Diagram Name="GRC_Entities">
+        <EntityTypeShape EntityType="GRCModel.CLIENTE" Width="1.5" PointX="3" PointY="1" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRCModel.ENDERECO" Width="1.5" PointX="0.75" PointY="1" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRCModel.PEDIDO" Width="1.5" PointX="5.25" PointY="1.25" Height="1.9802864583333326" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRCModel.PRODUTO" Width="1.5" PointX="7.5" PointY="1.375" Height="1.7879850260416657" IsExpanded="true" />
+        <AssociationConnector Association="GRCModel.FK_CLIENTE_ENDERECO" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="2.1824446614583337" />
           <ConnectorPoint PointX="3" PointY="2.1824446614583337" />
         </AssociationConnector>
-        <AssociationConnector Association="GRC.Model.FK_PEDIDO_CLIENTE" ManuallyRouted="false">
+        <AssociationConnector Association="GRCModel.FK_PEDIDO_CLIENTE" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="2.2401432291666663" />
           <ConnectorPoint PointX="5.25" PointY="2.2401432291666663" />
         </AssociationConnector>
-        <AssociationConnector Association="GRC.Model.PEDIDO_ITEM" ManuallyRouted="false">
+        <AssociationConnector Association="GRCModel.PEDIDO_ITEM" ManuallyRouted="false">
           <ConnectorPoint PointX="6.75" PointY="2.2689925130208328" />
           <ConnectorPoint PointX="7.5" PointY="2.2689925130208328" />
         </AssociationConnector>

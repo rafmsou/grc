@@ -1,6 +1,6 @@
 ﻿namespace GRC
 {
-    partial class Form4
+    partial class PesquisaCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -32,16 +32,19 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.txtCPF = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
+            this.dtGrdClientes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGrdClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(38, 164);
+            this.btnPesquisar.Location = new System.Drawing.Point(38, 155);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(232, 37);
             this.btnPesquisar.TabIndex = 17;
             this.btnPesquisar.Text = "PESQUISAR";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // Label1
             // 
@@ -69,17 +72,30 @@
             this.Label2.TabIndex = 14;
             this.Label2.Text = "CPF :";
             // 
-            // Form4
+            // dtGrdClientes
+            // 
+            this.dtGrdClientes.AllowUserToAddRows = false;
+            this.dtGrdClientes.AllowUserToDeleteRows = false;
+            this.dtGrdClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGrdClientes.Location = new System.Drawing.Point(38, 211);
+            this.dtGrdClientes.Name = "dtGrdClientes";
+            this.dtGrdClientes.ReadOnly = true;
+            this.dtGrdClientes.Size = new System.Drawing.Size(649, 275);
+            this.dtGrdClientes.TabIndex = 18;
+            // 
+            // PesquisaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 498);
+            this.Controls.Add(this.dtGrdClientes);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.Label2);
-            this.Name = "Form4";
+            this.Name = "PesquisaCliente";
             this.Text = "TELA4";
+            ((System.ComponentModel.ISupportInitialize)(this.dtGrdClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,6 +107,7 @@
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.TextBox txtCPF;
         internal System.Windows.Forms.Label Label2;
+        private System.Windows.Forms.DataGridView dtGrdClientes;
 
     }
 }

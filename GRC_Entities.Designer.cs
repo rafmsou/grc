@@ -18,9 +18,9 @@ using System.Runtime.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("GRC.Model", "FK_CLIENTE_ENDERECO", "ENDERECO", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(GRC.ENDERECO), "CLIENTE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.CLIENTE), true)]
-[assembly: EdmRelationshipAttribute("GRC.Model", "FK_PEDIDO_CLIENTE", "CLIENTE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(GRC.CLIENTE), "PEDIDO", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.PEDIDO), true)]
-[assembly: EdmRelationshipAttribute("GRC.Model", "PEDIDO_ITEM", "PEDIDO", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.PEDIDO), "PRODUTO", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.PRODUTO))]
+[assembly: EdmRelationshipAttribute("GRCModel", "FK_CLIENTE_ENDERECO", "ENDERECO", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(GRC.ENDERECO), "CLIENTE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.CLIENTE), true)]
+[assembly: EdmRelationshipAttribute("GRCModel", "FK_PEDIDO_CLIENTE", "CLIENTE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(GRC.CLIENTE), "PEDIDO", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.PEDIDO), true)]
+[assembly: EdmRelationshipAttribute("GRCModel", "PEDIDO_ITEM", "PEDIDO", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.PEDIDO), "PRODUTO", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.PRODUTO))]
 
 #endregion
 
@@ -36,27 +36,27 @@ namespace GRC
         #region Constructors
     
         /// <summary>
-        /// Initializes a new GRCEntities object using the connection string found in the 'GRCEntities' section of the application configuration file.
+        /// Initializes a new GRCEntities1 object using the connection string found in the 'GRCEntities1' section of the application configuration file.
         /// </summary>
-        public GRCEntities() : base("name=GRCEntities", "GRCEntities")
+        public GRCEntities() : base("name=GRCEntities1", "GRCEntities1")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new GRCEntities object.
+        /// Initialize a new GRCEntities1 object.
         /// </summary>
-        public GRCEntities(string connectionString) : base(connectionString, "GRCEntities")
+        public GRCEntities(string connectionString) : base(connectionString, "GRCEntities1")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new GRCEntities object.
+        /// Initialize a new GRCEntities1 object.
         /// </summary>
-        public GRCEntities(EntityConnection connection) : base(connection, "GRCEntities")
+        public GRCEntities(EntityConnection connection) : base(connection, "GRCEntities1")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
@@ -75,100 +75,100 @@ namespace GRC
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<CLIENTE> CLIENTEs
+        public ObjectSet<CLIENTE> CLIENTE
         {
             get
             {
-                if ((_CLIENTEs == null))
+                if ((_CLIENTE == null))
                 {
-                    _CLIENTEs = base.CreateObjectSet<CLIENTE>("CLIENTEs");
+                    _CLIENTE = base.CreateObjectSet<CLIENTE>("CLIENTE");
                 }
-                return _CLIENTEs;
+                return _CLIENTE;
             }
         }
-        private ObjectSet<CLIENTE> _CLIENTEs;
+        private ObjectSet<CLIENTE> _CLIENTE;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<ENDERECO> ENDERECOes
+        public ObjectSet<ENDERECO> ENDERECO
         {
             get
             {
-                if ((_ENDERECOes == null))
+                if ((_ENDERECO == null))
                 {
-                    _ENDERECOes = base.CreateObjectSet<ENDERECO>("ENDERECOes");
+                    _ENDERECO = base.CreateObjectSet<ENDERECO>("ENDERECO");
                 }
-                return _ENDERECOes;
+                return _ENDERECO;
             }
         }
-        private ObjectSet<ENDERECO> _ENDERECOes;
+        private ObjectSet<ENDERECO> _ENDERECO;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<PEDIDO> PEDIDOes
+        public ObjectSet<PEDIDO> PEDIDO
         {
             get
             {
-                if ((_PEDIDOes == null))
+                if ((_PEDIDO == null))
                 {
-                    _PEDIDOes = base.CreateObjectSet<PEDIDO>("PEDIDOes");
+                    _PEDIDO = base.CreateObjectSet<PEDIDO>("PEDIDO");
                 }
-                return _PEDIDOes;
+                return _PEDIDO;
             }
         }
-        private ObjectSet<PEDIDO> _PEDIDOes;
+        private ObjectSet<PEDIDO> _PEDIDO;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<PRODUTO> PRODUTOes
+        public ObjectSet<PRODUTO> PRODUTO
         {
             get
             {
-                if ((_PRODUTOes == null))
+                if ((_PRODUTO == null))
                 {
-                    _PRODUTOes = base.CreateObjectSet<PRODUTO>("PRODUTOes");
+                    _PRODUTO = base.CreateObjectSet<PRODUTO>("PRODUTO");
                 }
-                return _PRODUTOes;
+                return _PRODUTO;
             }
         }
-        private ObjectSet<PRODUTO> _PRODUTOes;
+        private ObjectSet<PRODUTO> _PRODUTO;
 
         #endregion
         #region AddTo Methods
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the CLIENTEs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the CLIENTE EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToCLIENTEs(CLIENTE cLIENTE)
+        public void AddToCLIENTE(CLIENTE cLIENTE)
         {
-            base.AddObject("CLIENTEs", cLIENTE);
+            base.AddObject("CLIENTE", cLIENTE);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the ENDERECOes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the ENDERECO EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToENDERECOes(ENDERECO eNDERECO)
+        public void AddToENDERECO(ENDERECO eNDERECO)
         {
-            base.AddObject("ENDERECOes", eNDERECO);
+            base.AddObject("ENDERECO", eNDERECO);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the PEDIDOes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the PEDIDO EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToPEDIDOes(PEDIDO pEDIDO)
+        public void AddToPEDIDO(PEDIDO pEDIDO)
         {
-            base.AddObject("PEDIDOes", pEDIDO);
+            base.AddObject("PEDIDO", pEDIDO);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the PRODUTOes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the PRODUTO EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToPRODUTOes(PRODUTO pRODUTO)
+        public void AddToPRODUTO(PRODUTO pRODUTO)
         {
-            base.AddObject("PRODUTOes", pRODUTO);
+            base.AddObject("PRODUTO", pRODUTO);
         }
 
         #endregion
@@ -182,7 +182,7 @@ namespace GRC
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="GRC.Model", Name="CLIENTE")]
+    [EdmEntityTypeAttribute(NamespaceName="GRCModel", Name="CLIENTE")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class CLIENTE : EntityObject
@@ -368,16 +368,16 @@ namespace GRC
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("GRC.Model", "FK_CLIENTE_ENDERECO", "ENDERECO")]
+        [EdmRelationshipNavigationPropertyAttribute("GRCModel", "FK_CLIENTE_ENDERECO", "ENDERECO")]
         public ENDERECO ENDERECO
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ENDERECO>("GRC.Model.FK_CLIENTE_ENDERECO", "ENDERECO").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ENDERECO>("GRCModel.FK_CLIENTE_ENDERECO", "ENDERECO").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ENDERECO>("GRC.Model.FK_CLIENTE_ENDERECO", "ENDERECO").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ENDERECO>("GRCModel.FK_CLIENTE_ENDERECO", "ENDERECO").Value = value;
             }
         }
         /// <summary>
@@ -389,13 +389,13 @@ namespace GRC
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ENDERECO>("GRC.Model.FK_CLIENTE_ENDERECO", "ENDERECO");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ENDERECO>("GRCModel.FK_CLIENTE_ENDERECO", "ENDERECO");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ENDERECO>("GRC.Model.FK_CLIENTE_ENDERECO", "ENDERECO", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ENDERECO>("GRCModel.FK_CLIENTE_ENDERECO", "ENDERECO", value);
                 }
             }
         }
@@ -406,18 +406,18 @@ namespace GRC
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("GRC.Model", "FK_PEDIDO_CLIENTE", "PEDIDO")]
-        public EntityCollection<PEDIDO> PEDIDOes
+        [EdmRelationshipNavigationPropertyAttribute("GRCModel", "FK_PEDIDO_CLIENTE", "PEDIDO")]
+        public EntityCollection<PEDIDO> PEDIDO
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PEDIDO>("GRC.Model.FK_PEDIDO_CLIENTE", "PEDIDO");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PEDIDO>("GRCModel.FK_PEDIDO_CLIENTE", "PEDIDO");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PEDIDO>("GRC.Model.FK_PEDIDO_CLIENTE", "PEDIDO", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PEDIDO>("GRCModel.FK_PEDIDO_CLIENTE", "PEDIDO", value);
                 }
             }
         }
@@ -428,7 +428,7 @@ namespace GRC
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="GRC.Model", Name="ENDERECO")]
+    [EdmEntityTypeAttribute(NamespaceName="GRCModel", Name="ENDERECO")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class ENDERECO : EntityObject
@@ -606,18 +606,18 @@ namespace GRC
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("GRC.Model", "FK_CLIENTE_ENDERECO", "CLIENTE")]
-        public EntityCollection<CLIENTE> CLIENTEs
+        [EdmRelationshipNavigationPropertyAttribute("GRCModel", "FK_CLIENTE_ENDERECO", "CLIENTE")]
+        public EntityCollection<CLIENTE> CLIENTE
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CLIENTE>("GRC.Model.FK_CLIENTE_ENDERECO", "CLIENTE");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CLIENTE>("GRCModel.FK_CLIENTE_ENDERECO", "CLIENTE");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CLIENTE>("GRC.Model.FK_CLIENTE_ENDERECO", "CLIENTE", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CLIENTE>("GRCModel.FK_CLIENTE_ENDERECO", "CLIENTE", value);
                 }
             }
         }
@@ -628,7 +628,7 @@ namespace GRC
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="GRC.Model", Name="PEDIDO")]
+    [EdmEntityTypeAttribute(NamespaceName="GRCModel", Name="PEDIDO")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class PEDIDO : EntityObject
@@ -738,16 +738,16 @@ namespace GRC
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("GRC.Model", "FK_PEDIDO_CLIENTE", "CLIENTE")]
+        [EdmRelationshipNavigationPropertyAttribute("GRCModel", "FK_PEDIDO_CLIENTE", "CLIENTE")]
         public CLIENTE CLIENTE
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CLIENTE>("GRC.Model.FK_PEDIDO_CLIENTE", "CLIENTE").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CLIENTE>("GRCModel.FK_PEDIDO_CLIENTE", "CLIENTE").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CLIENTE>("GRC.Model.FK_PEDIDO_CLIENTE", "CLIENTE").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CLIENTE>("GRCModel.FK_PEDIDO_CLIENTE", "CLIENTE").Value = value;
             }
         }
         /// <summary>
@@ -759,13 +759,13 @@ namespace GRC
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CLIENTE>("GRC.Model.FK_PEDIDO_CLIENTE", "CLIENTE");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CLIENTE>("GRCModel.FK_PEDIDO_CLIENTE", "CLIENTE");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CLIENTE>("GRC.Model.FK_PEDIDO_CLIENTE", "CLIENTE", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CLIENTE>("GRCModel.FK_PEDIDO_CLIENTE", "CLIENTE", value);
                 }
             }
         }
@@ -776,18 +776,18 @@ namespace GRC
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("GRC.Model", "PEDIDO_ITEM", "PRODUTO")]
-        public EntityCollection<PRODUTO> PRODUTOes
+        [EdmRelationshipNavigationPropertyAttribute("GRCModel", "PEDIDO_ITEM", "PRODUTO")]
+        public EntityCollection<PRODUTO> PRODUTO
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PRODUTO>("GRC.Model.PEDIDO_ITEM", "PRODUTO");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PRODUTO>("GRCModel.PEDIDO_ITEM", "PRODUTO");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PRODUTO>("GRC.Model.PEDIDO_ITEM", "PRODUTO", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PRODUTO>("GRCModel.PEDIDO_ITEM", "PRODUTO", value);
                 }
             }
         }
@@ -798,7 +798,7 @@ namespace GRC
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="GRC.Model", Name="PRODUTO")]
+    [EdmEntityTypeAttribute(NamespaceName="GRCModel", Name="PRODUTO")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class PRODUTO : EntityObject
@@ -908,18 +908,18 @@ namespace GRC
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("GRC.Model", "PEDIDO_ITEM", "PEDIDO")]
-        public EntityCollection<PEDIDO> PEDIDOes
+        [EdmRelationshipNavigationPropertyAttribute("GRCModel", "PEDIDO_ITEM", "PEDIDO")]
+        public EntityCollection<PEDIDO> PEDIDO
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PEDIDO>("GRC.Model.PEDIDO_ITEM", "PEDIDO");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PEDIDO>("GRCModel.PEDIDO_ITEM", "PEDIDO");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PEDIDO>("GRC.Model.PEDIDO_ITEM", "PEDIDO", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PEDIDO>("GRCModel.PEDIDO_ITEM", "PEDIDO", value);
                 }
             }
         }

@@ -1,6 +1,6 @@
 ﻿namespace GRC
 {
-    partial class Form7
+    partial class Produto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,28 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Button3 = new System.Windows.Forms.Button();
-            this.Button1 = new System.Windows.Forms.Button();
+            this.btnListaProduto = new System.Windows.Forms.Button();
+            this.btnCadastraProduto = new System.Windows.Forms.Button();
             this.Label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Button3
+            // btnListaProduto
             // 
-            this.Button3.Location = new System.Drawing.Point(21, 215);
-            this.Button3.Name = "Button3";
-            this.Button3.Size = new System.Drawing.Size(331, 68);
-            this.Button3.TabIndex = 9;
-            this.Button3.Text = "LISTA DE PRODUTO";
-            this.Button3.UseVisualStyleBackColor = true;
+            this.btnListaProduto.Location = new System.Drawing.Point(21, 215);
+            this.btnListaProduto.Name = "btnListaProduto";
+            this.btnListaProduto.Size = new System.Drawing.Size(331, 68);
+            this.btnListaProduto.TabIndex = 9;
+            this.btnListaProduto.Text = "LISTA DE PRODUTO";
+            this.btnListaProduto.UseVisualStyleBackColor = true;
+            this.btnListaProduto.Click += new System.EventHandler(this.btnListaProduto_Click);
             // 
-            // Button1
+            // btnCadastraProduto
             // 
-            this.Button1.Location = new System.Drawing.Point(21, 115);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(331, 62);
-            this.Button1.TabIndex = 8;
-            this.Button1.Text = "CADASTRAR PRODUTO";
-            this.Button1.UseVisualStyleBackColor = true;
+            this.btnCadastraProduto.Location = new System.Drawing.Point(21, 115);
+            this.btnCadastraProduto.Name = "btnCadastraProduto";
+            this.btnCadastraProduto.Size = new System.Drawing.Size(331, 62);
+            this.btnCadastraProduto.TabIndex = 8;
+            this.btnCadastraProduto.Text = "CADASTRAR PRODUTO";
+            this.btnCadastraProduto.UseVisualStyleBackColor = true;
+            this.btnCadastraProduto.Click += new System.EventHandler(this.btnCadastraProduto_Click);
             // 
             // Label1
             // 
@@ -61,15 +63,15 @@
             this.Label1.TabIndex = 7;
             this.Label1.Text = "PRODUTO";
             // 
-            // Form7
+            // Produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 512);
-            this.Controls.Add(this.Button3);
-            this.Controls.Add(this.Button1);
+            this.Controls.Add(this.btnListaProduto);
+            this.Controls.Add(this.btnCadastraProduto);
             this.Controls.Add(this.Label1);
-            this.Name = "Form7";
+            this.Name = "Produto";
             this.Text = "TELA8";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -78,8 +80,8 @@
 
         #endregion
 
-        internal System.Windows.Forms.Button Button3;
-        internal System.Windows.Forms.Button Button1;
+        internal System.Windows.Forms.Button btnListaProduto;
+        internal System.Windows.Forms.Button btnCadastraProduto;
         internal System.Windows.Forms.Label Label1;
     }
 }

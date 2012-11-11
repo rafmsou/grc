@@ -9,11 +9,21 @@ using System.Windows.Forms;
 
 namespace GRC
 {
-    public partial class Form2 : Form
+    public partial class Cliente : Form
     {
-        public Form2()
+        public Cliente()
         {
             InitializeComponent();
+        }
+
+        private void btnCadastrarCliente_Click(object sender, EventArgs e)
+        {
+            new CadastroCliente().ShowDialog();
+        }
+
+        private void btnPesquisarCliente_Click(object sender, EventArgs e)
+        {
+            new PesquisaCliente().ShowDialog();
         }
     }
 }

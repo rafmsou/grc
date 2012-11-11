@@ -1,6 +1,6 @@
 ﻿namespace GRC
 {
-    partial class menu
+    partial class TelaInicial
     {
         /// <summary>
         /// Required designer variable.

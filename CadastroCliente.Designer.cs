@@ -33,7 +33,6 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.txtCPF = new System.Windows.Forms.TextBox();
             this.Label7 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
             this.Label3 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbUF = new System.Windows.Forms.ComboBox();
+            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // btnEnviar
@@ -92,13 +92,6 @@
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(201, 20);
             this.txtTelefone.TabIndex = 26;
-            // 
-            // txtCPF
-            // 
-            this.txtCPF.Location = new System.Drawing.Point(192, 135);
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(201, 20);
-            this.txtCPF.TabIndex = 25;
             // 
             // Label7
             // 
@@ -166,9 +159,9 @@
             this.cbLogradouro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLogradouro.FormattingEnabled = true;
             this.cbLogradouro.Items.AddRange(new object[] {
-            "RUA",
-            "AVENIDA",
-            "ALAMEDA"});
+            "Rua",
+            "Avenida",
+            "Alameda"});
             this.cbLogradouro.Location = new System.Drawing.Point(110, 295);
             this.cbLogradouro.Name = "cbLogradouro";
             this.cbLogradouro.Size = new System.Drawing.Size(121, 21);
@@ -268,11 +261,20 @@
             this.cbUF.Size = new System.Drawing.Size(81, 21);
             this.cbUF.TabIndex = 41;
             // 
+            // txtCPF
+            // 
+            this.txtCPF.Location = new System.Drawing.Point(192, 138);
+            this.txtCPF.Mask = "009,009,009-09";
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(138, 20);
+            this.txtCPF.TabIndex = 42;
+            // 
             // CadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 518);
+            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.cbUF);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -288,7 +290,6 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtTelefone);
-            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.Label7);
             this.Controls.Add(this.Label4);
             this.Controls.Add(this.Label3);
@@ -309,7 +310,6 @@
         internal System.Windows.Forms.TextBox txtEmail;
         internal System.Windows.Forms.TextBox txtEndereco;
         internal System.Windows.Forms.TextBox txtTelefone;
-        internal System.Windows.Forms.TextBox txtCPF;
         internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.Label Label3;
@@ -326,5 +326,6 @@
         internal System.Windows.Forms.TextBox txtCidade;
         internal System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cbUF;
+        private System.Windows.Forms.MaskedTextBox txtCPF;
     }
 }

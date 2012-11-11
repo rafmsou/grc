@@ -15,7 +15,7 @@ namespace GRC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CadastroCliente());
+            Application.Run(new TelaInicial());
         }
     }
 }

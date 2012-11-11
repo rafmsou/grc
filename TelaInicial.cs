@@ -9,21 +9,21 @@ using System.Windows.Forms;
 
 namespace GRC
 {
-    public partial class menu : Form
+    public partial class TelaInicial : Form
     {
-        public menu()
+        public TelaInicial()
         {
             InitializeComponent();
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-
+            new Cliente().ShowDialog();
         }
 
         private void btnProduto_Click(object sender, EventArgs e)
         {
-
+            new Produto().ShowDialog();
         }
     }
 }

@@ -9,11 +9,48 @@ using System.Windows.Forms;
 
 namespace GRC
 {
-    public partial class F : Form
+    public partial class CadastroProduto : Form
     {
-        public F()
+        public CadastroProduto()
         {
             InitializeComponent();
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            GRCEntities db = new GRCEntities();
+
+            if (txtDescricao.Text == "")
+            {
+                MessageBox.Show("Descrição não pode ser vazia.");
+                return;
+            }
+            if (txtValor.Text == String.Empty)
+            {
+                MessageBox.Show("Valor não pode ser vazio.");
+                return;
+            }
+
+
+            PRODUTO prod = new PRODUTO();
+            try
+            {
+                prod.DESCRICAO = txtDescricao.Text;
+                prod.VALOR = Convert.ToDecimal(txtValor.Text);
+
+                db.AddToPRODUTO(prod);
+                db.SaveChanges();
+                MessageBox.Show("Produto salvo com sucesso.");
+                txtDescricao.Text = String.Empty;
+                txtValor.Text = String.Empty;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("erro: " + ex.Message);
+            }
+            
+
         }
     }
 }

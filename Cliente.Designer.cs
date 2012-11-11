@@ -1,6 +1,6 @@
 ﻿namespace GRC
 {
-    partial class Form2
+    partial class Cliente
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,7 @@
             this.btnPesquisarCliente.TabIndex = 6;
             this.btnPesquisarCliente.Text = "PESQUISAR CLIENTE ";
             this.btnPesquisarCliente.UseVisualStyleBackColor = true;
+            this.btnPesquisarCliente.Click += new System.EventHandler(this.btnPesquisarCliente_Click);
             // 
             // btnCadastrarCliente
             // 
@@ -50,6 +51,7 @@
             this.btnCadastrarCliente.TabIndex = 5;
             this.btnCadastrarCliente.Text = "CADASTRAR CLIENTE";
             this.btnCadastrarCliente.UseVisualStyleBackColor = true;
+            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click);
             // 
             // Label1
             // 
@@ -61,7 +63,7 @@
             this.Label1.TabIndex = 4;
             this.Label1.Text = "CLIENTE";
             // 
-            // Form2
+            // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -69,7 +71,7 @@
             this.Controls.Add(this.btnPesquisarCliente);
             this.Controls.Add(this.btnCadastrarCliente);
             this.Controls.Add(this.Label1);
-            this.Name = "Form2";
+            this.Name = "Cliente";
             this.Text = "TELA2";
             this.ResumeLayout(false);
             this.PerformLayout();
