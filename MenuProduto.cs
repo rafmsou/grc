@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace GRC
 {
-    public partial class Produto : Form
+    public partial class MenuProduto : Form
     {
-        public Produto()
+        public MenuProduto()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace GRC
 
         private void btnListaProduto_Click(object sender, EventArgs e)
         {
-
+            new ListaProduto().ShowDialog();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace GRC
 {
-    partial class Cliente
+    partial class MenuCliente
     {
         /// <summary>
         /// Required designer variable.

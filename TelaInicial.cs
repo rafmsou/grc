@@ -18,17 +18,17 @@ namespace GRC
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-            new Cliente().ShowDialog();
+            new MenuCliente().ShowDialog();
         }
 
         private void btnProduto_Click(object sender, EventArgs e)
         {
-            new Produto().ShowDialog();
+            new MenuProduto().ShowDialog();
         }
 
         private void btnPedido_Click(object sender, EventArgs e)
         {
-            new CadastroPedido().ShowDialog();
+            new MenuPedido().ShowDialog();
         }
     }
 }

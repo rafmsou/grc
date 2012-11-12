@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6daedbee223c47b4ac4bd12e67736c06" Name="Diagram1">
-        <EntityTypeShape EntityType="GRC.CLIENTE" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="GRC.ENDERECO" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="GRC.PEDIDO" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="GRC.PEDIDO_ITEM" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="GRC.PRODUTO" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
-        <AssociationConnector Association="GRC.FK_CLIENTE_ENDERECO" ManuallyRouted="false" />
-        <AssociationConnector Association="GRC.FK_PEDIDO_CLIENTE" ManuallyRouted="false" />
-        <AssociationConnector Association="GRC.FK_PEDIDO_ITEM_PEDIDO" ManuallyRouted="false" />
-        <AssociationConnector Association="GRC.FK_PEDIDO_ITEM_PRODUTO" ManuallyRouted="false" />
+      <Diagram DiagramId="9a29b6c599774556accf478043aff083" Name="Diagram1">
+        <EntityTypeShape EntityType="GRC.Model.CLIENTE" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRC.Model.ENDERECO" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRC.Model.PEDIDO" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRC.Model.PEDIDO_ITEM" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRC.Model.PRODUTO" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="GRC.Model.FK_CLIENTE_ENDERECO" ManuallyRouted="false" />
+        <AssociationConnector Association="GRC.Model.FK_PEDIDO_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="GRC.Model.FK_PEDIDO_ITEM_PEDIDO" ManuallyRouted="false" />
+        <AssociationConnector Association="GRC.Model.FK_PEDIDO_ITEM_PRODUTO" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

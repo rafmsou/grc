@@ -65,22 +65,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente.cs">
+    <Compile Include="ListaProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente.Designer.cs">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <Compile Include="ListaProduto.Designer.cs">
+      <DependentUpon>ListaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuCliente.Designer.cs">
+      <DependentUpon>MenuCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="GRC_Entities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GRC_Entities.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Produto.cs">
+    <Compile Include="MenuPedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Produto.Designer.cs">
-      <DependentUpon>Produto.cs</DependentUpon>
+    <Compile Include="MenuPedido.Designer.cs">
+      <DependentUpon>MenuPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuProduto.Designer.cs">
+      <DependentUpon>MenuProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaInicial.cs">
       <SubType>Form</SubType>
@@ -120,11 +132,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Cliente.resx">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="ListaProduto.resx">
+      <DependentUpon>ListaProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Produto.resx">
-      <DependentUpon>Produto.cs</DependentUpon>
+    <EmbeddedResource Include="MenuCliente.resx">
+      <DependentUpon>MenuCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPedido.resx">
+      <DependentUpon>MenuPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuProduto.resx">
+      <DependentUpon>MenuProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>
@@ -162,7 +180,6 @@
     <None Include="GRC_Entities.edmx.diagram">
       <DependentUpon>GRC_Entities.edmx</DependentUpon>
     </None>
-    <None Include="packages.config" />
     <None Include="Properties\DataSources\GRCEntities.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

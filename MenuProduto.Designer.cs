@@ -1,6 +1,6 @@
 ﻿namespace GRC
 {
-    partial class Produto
+    partial class MenuProduto
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             // 
             // btnListaProduto
             // 
-            this.btnListaProduto.Location = new System.Drawing.Point(21, 215);
+            this.btnListaProduto.Location = new System.Drawing.Point(176, 248);
             this.btnListaProduto.Name = "btnListaProduto";
             this.btnListaProduto.Size = new System.Drawing.Size(331, 68);
             this.btnListaProduto.TabIndex = 9;
@@ -45,7 +45,7 @@
             // 
             // btnCadastraProduto
             // 
-            this.btnCadastraProduto.Location = new System.Drawing.Point(21, 115);
+            this.btnCadastraProduto.Location = new System.Drawing.Point(176, 148);
             this.btnCadastraProduto.Name = "btnCadastraProduto";
             this.btnCadastraProduto.Size = new System.Drawing.Size(331, 62);
             this.btnCadastraProduto.TabIndex = 8;
@@ -57,21 +57,21 @@
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Arial Black", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(25, 22);
+            this.Label1.Location = new System.Drawing.Point(223, 28);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(213, 50);
+            this.Label1.Size = new System.Drawing.Size(211, 50);
             this.Label1.TabIndex = 7;
             this.Label1.Text = "PRODUTO";
             // 
-            // Produto
+            // MenuProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 512);
+            this.ClientSize = new System.Drawing.Size(704, 452);
             this.Controls.Add(this.btnListaProduto);
             this.Controls.Add(this.btnCadastraProduto);
             this.Controls.Add(this.Label1);
-            this.Name = "Produto";
+            this.Name = "MenuProduto";
             this.Text = "TELA8";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -9,13 +9,13 @@
 //------------------------------------------------------------------------------
 
 [assembly: global::System.Data.Objects.DataClasses.EdmSchemaAttribute()]
-[assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("GRC", "FK_CLIENTE_ENDERECO", "ENDERECO", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(GRC.ENDERECO), "CLIENTE", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.CLIENTE))]
-[assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("GRC", "FK_PEDIDO_CLIENTE", "CLIENTE", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(GRC.CLIENTE), "PEDIDO", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.PEDIDO))]
-[assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("GRC", "FK_PEDIDO_ITEM_PEDIDO", "PEDIDO", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(GRC.PEDIDO), "PEDIDO_ITEM", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.PEDIDO_ITEM))]
-[assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("GRC", "FK_PEDIDO_ITEM_PRODUTO", "PRODUTO", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(GRC.PRODUTO), "PEDIDO_ITEM", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.PEDIDO_ITEM))]
+[assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("GRC.Model", "FK_CLIENTE_ENDERECO", "ENDERECO", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(GRC.ENDERECO), "CLIENTE", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.CLIENTE))]
+[assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("GRC.Model", "FK_PEDIDO_CLIENTE", "CLIENTE", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(GRC.CLIENTE), "PEDIDO", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.PEDIDO))]
+[assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("GRC.Model", "FK_PEDIDO_ITEM_PEDIDO", "PEDIDO", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(GRC.PEDIDO), "PEDIDO_ITEM", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.PEDIDO_ITEM))]
+[assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("GRC.Model", "FK_PEDIDO_ITEM_PRODUTO", "PRODUTO", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(GRC.PRODUTO), "PEDIDO_ITEM", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(GRC.PEDIDO_ITEM))]
 
 // Original file name:
-// Generation date: 11/11/2012 21:32:42
+// Generation date: 11/11/2012 22:21:05
 namespace GRC
 {
     
@@ -176,12 +176,12 @@ namespace GRC
         }
     }
     /// <summary>
-    /// There are no comments for GRC.CLIENTE in the schema.
+    /// There are no comments for GRC.Model.CLIENTE in the schema.
     /// </summary>
     /// <KeyProperties>
     /// CODIGO
     /// </KeyProperties>
-    [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="GRC", Name="CLIENTE")]
+    [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="GRC.Model", Name="CLIENTE")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
     [global::System.Serializable()]
     public partial class CLIENTE : global::System.Data.Objects.DataClasses.EntityObject
@@ -341,7 +341,7 @@ namespace GRC
         /// <summary>
         /// There are no comments for ENDERECO in the schema.
         /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC", "FK_CLIENTE_ENDERECO", "ENDERECO")]
+        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC.Model", "FK_CLIENTE_ENDERECO", "ENDERECO")]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         [global::System.Xml.Serialization.XmlIgnoreAttribute()]
         [global::System.Xml.Serialization.SoapIgnoreAttribute()]
@@ -350,11 +350,11 @@ namespace GRC
         {
             get
             {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<ENDERECO>("GRC.FK_CLIENTE_ENDERECO", "ENDERECO").Value;
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<ENDERECO>("GRC.Model.FK_CLIENTE_ENDERECO", "ENDERECO").Value;
             }
             set
             {
-                ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<ENDERECO>("GRC.FK_CLIENTE_ENDERECO", "ENDERECO").Value = value;
+                ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<ENDERECO>("GRC.Model.FK_CLIENTE_ENDERECO", "ENDERECO").Value = value;
             }
         }
         /// <summary>
@@ -367,20 +367,20 @@ namespace GRC
         {
             get
             {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<ENDERECO>("GRC.FK_CLIENTE_ENDERECO", "ENDERECO");
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<ENDERECO>("GRC.Model.FK_CLIENTE_ENDERECO", "ENDERECO");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedReference<ENDERECO>("GRC.FK_CLIENTE_ENDERECO", "ENDERECO", value);
+                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedReference<ENDERECO>("GRC.Model.FK_CLIENTE_ENDERECO", "ENDERECO", value);
                 }
             }
         }
         /// <summary>
         /// There are no comments for PEDIDO in the schema.
         /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC", "FK_PEDIDO_CLIENTE", "PEDIDO")]
+        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC.Model", "FK_PEDIDO_CLIENTE", "PEDIDO")]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         [global::System.Xml.Serialization.XmlIgnoreAttribute()]
         [global::System.Xml.Serialization.SoapIgnoreAttribute()]
@@ -389,24 +389,24 @@ namespace GRC
         {
             get
             {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedCollection<PEDIDO>("GRC.FK_PEDIDO_CLIENTE", "PEDIDO");
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedCollection<PEDIDO>("GRC.Model.FK_PEDIDO_CLIENTE", "PEDIDO");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedCollection<PEDIDO>("GRC.FK_PEDIDO_CLIENTE", "PEDIDO", value);
+                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedCollection<PEDIDO>("GRC.Model.FK_PEDIDO_CLIENTE", "PEDIDO", value);
                 }
             }
         }
     }
     /// <summary>
-    /// There are no comments for GRC.ENDERECO in the schema.
+    /// There are no comments for GRC.Model.ENDERECO in the schema.
     /// </summary>
     /// <KeyProperties>
     /// CODIGO
     /// </KeyProperties>
-    [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="GRC", Name="ENDERECO")]
+    [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="GRC.Model", Name="ENDERECO")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
     [global::System.Serializable()]
     public partial class ENDERECO : global::System.Data.Objects.DataClasses.EntityObject
@@ -587,7 +587,7 @@ namespace GRC
         /// <summary>
         /// There are no comments for CLIENTE in the schema.
         /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC", "FK_CLIENTE_ENDERECO", "CLIENTE")]
+        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC.Model", "FK_CLIENTE_ENDERECO", "CLIENTE")]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         [global::System.Xml.Serialization.XmlIgnoreAttribute()]
         [global::System.Xml.Serialization.SoapIgnoreAttribute()]
@@ -596,24 +596,24 @@ namespace GRC
         {
             get
             {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedCollection<CLIENTE>("GRC.FK_CLIENTE_ENDERECO", "CLIENTE");
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedCollection<CLIENTE>("GRC.Model.FK_CLIENTE_ENDERECO", "CLIENTE");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedCollection<CLIENTE>("GRC.FK_CLIENTE_ENDERECO", "CLIENTE", value);
+                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedCollection<CLIENTE>("GRC.Model.FK_CLIENTE_ENDERECO", "CLIENTE", value);
                 }
             }
         }
     }
     /// <summary>
-    /// There are no comments for GRC.PEDIDO in the schema.
+    /// There are no comments for GRC.Model.PEDIDO in the schema.
     /// </summary>
     /// <KeyProperties>
     /// CODIGO
     /// </KeyProperties>
-    [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="GRC", Name="PEDIDO")]
+    [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="GRC.Model", Name="PEDIDO")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
     [global::System.Serializable()]
     public partial class PEDIDO : global::System.Data.Objects.DataClasses.EntityObject
@@ -688,7 +688,7 @@ namespace GRC
         /// <summary>
         /// There are no comments for CLIENTE in the schema.
         /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC", "FK_PEDIDO_CLIENTE", "CLIENTE")]
+        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC.Model", "FK_PEDIDO_CLIENTE", "CLIENTE")]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         [global::System.Xml.Serialization.XmlIgnoreAttribute()]
         [global::System.Xml.Serialization.SoapIgnoreAttribute()]
@@ -697,11 +697,11 @@ namespace GRC
         {
             get
             {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<CLIENTE>("GRC.FK_PEDIDO_CLIENTE", "CLIENTE").Value;
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<CLIENTE>("GRC.Model.FK_PEDIDO_CLIENTE", "CLIENTE").Value;
             }
             set
             {
-                ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<CLIENTE>("GRC.FK_PEDIDO_CLIENTE", "CLIENTE").Value = value;
+                ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<CLIENTE>("GRC.Model.FK_PEDIDO_CLIENTE", "CLIENTE").Value = value;
             }
         }
         /// <summary>
@@ -714,20 +714,20 @@ namespace GRC
         {
             get
             {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<CLIENTE>("GRC.FK_PEDIDO_CLIENTE", "CLIENTE");
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<CLIENTE>("GRC.Model.FK_PEDIDO_CLIENTE", "CLIENTE");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedReference<CLIENTE>("GRC.FK_PEDIDO_CLIENTE", "CLIENTE", value);
+                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedReference<CLIENTE>("GRC.Model.FK_PEDIDO_CLIENTE", "CLIENTE", value);
                 }
             }
         }
         /// <summary>
         /// There are no comments for PEDIDO_ITEM in the schema.
         /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC", "FK_PEDIDO_ITEM_PEDIDO", "PEDIDO_ITEM")]
+        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC.Model", "FK_PEDIDO_ITEM_PEDIDO", "PEDIDO_ITEM")]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         [global::System.Xml.Serialization.XmlIgnoreAttribute()]
         [global::System.Xml.Serialization.SoapIgnoreAttribute()]
@@ -736,25 +736,25 @@ namespace GRC
         {
             get
             {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedCollection<PEDIDO_ITEM>("GRC.FK_PEDIDO_ITEM_PEDIDO", "PEDIDO_ITEM");
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedCollection<PEDIDO_ITEM>("GRC.Model.FK_PEDIDO_ITEM_PEDIDO", "PEDIDO_ITEM");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedCollection<PEDIDO_ITEM>("GRC.FK_PEDIDO_ITEM_PEDIDO", "PEDIDO_ITEM", value);
+                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedCollection<PEDIDO_ITEM>("GRC.Model.FK_PEDIDO_ITEM_PEDIDO", "PEDIDO_ITEM", value);
                 }
             }
         }
     }
     /// <summary>
-    /// There are no comments for GRC.PEDIDO_ITEM in the schema.
+    /// There are no comments for GRC.Model.PEDIDO_ITEM in the schema.
     /// </summary>
     /// <KeyProperties>
     /// CODIGO_PRODUTO
     /// CODIGO_PEDIDO
     /// </KeyProperties>
-    [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="GRC", Name="PEDIDO_ITEM")]
+    [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="GRC.Model", Name="PEDIDO_ITEM")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
     [global::System.Serializable()]
     public partial class PEDIDO_ITEM : global::System.Data.Objects.DataClasses.EntityObject
@@ -916,7 +916,7 @@ namespace GRC
         /// <summary>
         /// There are no comments for PEDIDO in the schema.
         /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC", "FK_PEDIDO_ITEM_PEDIDO", "PEDIDO")]
+        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC.Model", "FK_PEDIDO_ITEM_PEDIDO", "PEDIDO")]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         [global::System.Xml.Serialization.XmlIgnoreAttribute()]
         [global::System.Xml.Serialization.SoapIgnoreAttribute()]
@@ -925,11 +925,11 @@ namespace GRC
         {
             get
             {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<PEDIDO>("GRC.FK_PEDIDO_ITEM_PEDIDO", "PEDIDO").Value;
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<PEDIDO>("GRC.Model.FK_PEDIDO_ITEM_PEDIDO", "PEDIDO").Value;
             }
             set
             {
-                ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<PEDIDO>("GRC.FK_PEDIDO_ITEM_PEDIDO", "PEDIDO").Value = value;
+                ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<PEDIDO>("GRC.Model.FK_PEDIDO_ITEM_PEDIDO", "PEDIDO").Value = value;
             }
         }
         /// <summary>
@@ -942,20 +942,20 @@ namespace GRC
         {
             get
             {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<PEDIDO>("GRC.FK_PEDIDO_ITEM_PEDIDO", "PEDIDO");
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<PEDIDO>("GRC.Model.FK_PEDIDO_ITEM_PEDIDO", "PEDIDO");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedReference<PEDIDO>("GRC.FK_PEDIDO_ITEM_PEDIDO", "PEDIDO", value);
+                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedReference<PEDIDO>("GRC.Model.FK_PEDIDO_ITEM_PEDIDO", "PEDIDO", value);
                 }
             }
         }
         /// <summary>
         /// There are no comments for PRODUTO in the schema.
         /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC", "FK_PEDIDO_ITEM_PRODUTO", "PRODUTO")]
+        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC.Model", "FK_PEDIDO_ITEM_PRODUTO", "PRODUTO")]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         [global::System.Xml.Serialization.XmlIgnoreAttribute()]
         [global::System.Xml.Serialization.SoapIgnoreAttribute()]
@@ -964,11 +964,11 @@ namespace GRC
         {
             get
             {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<PRODUTO>("GRC.FK_PEDIDO_ITEM_PRODUTO", "PRODUTO").Value;
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<PRODUTO>("GRC.Model.FK_PEDIDO_ITEM_PRODUTO", "PRODUTO").Value;
             }
             set
             {
-                ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<PRODUTO>("GRC.FK_PEDIDO_ITEM_PRODUTO", "PRODUTO").Value = value;
+                ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<PRODUTO>("GRC.Model.FK_PEDIDO_ITEM_PRODUTO", "PRODUTO").Value = value;
             }
         }
         /// <summary>
@@ -981,24 +981,24 @@ namespace GRC
         {
             get
             {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<PRODUTO>("GRC.FK_PEDIDO_ITEM_PRODUTO", "PRODUTO");
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<PRODUTO>("GRC.Model.FK_PEDIDO_ITEM_PRODUTO", "PRODUTO");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedReference<PRODUTO>("GRC.FK_PEDIDO_ITEM_PRODUTO", "PRODUTO", value);
+                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedReference<PRODUTO>("GRC.Model.FK_PEDIDO_ITEM_PRODUTO", "PRODUTO", value);
                 }
             }
         }
     }
     /// <summary>
-    /// There are no comments for GRC.PRODUTO in the schema.
+    /// There are no comments for GRC.Model.PRODUTO in the schema.
     /// </summary>
     /// <KeyProperties>
     /// CODIGO
     /// </KeyProperties>
-    [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="GRC", Name="PRODUTO")]
+    [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="GRC.Model", Name="PRODUTO")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
     [global::System.Serializable()]
     public partial class PRODUTO : global::System.Data.Objects.DataClasses.EntityObject
@@ -1102,7 +1102,7 @@ namespace GRC
         /// <summary>
         /// There are no comments for PEDIDO_ITEM in the schema.
         /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC", "FK_PEDIDO_ITEM_PRODUTO", "PEDIDO_ITEM")]
+        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("GRC.Model", "FK_PEDIDO_ITEM_PRODUTO", "PEDIDO_ITEM")]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         [global::System.Xml.Serialization.XmlIgnoreAttribute()]
         [global::System.Xml.Serialization.SoapIgnoreAttribute()]
@@ -1111,13 +1111,13 @@ namespace GRC
         {
             get
             {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedCollection<PEDIDO_ITEM>("GRC.FK_PEDIDO_ITEM_PRODUTO", "PEDIDO_ITEM");
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedCollection<PEDIDO_ITEM>("GRC.Model.FK_PEDIDO_ITEM_PRODUTO", "PEDIDO_ITEM");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedCollection<PEDIDO_ITEM>("GRC.FK_PEDIDO_ITEM_PRODUTO", "PEDIDO_ITEM", value);
+                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedCollection<PEDIDO_ITEM>("GRC.Model.FK_PEDIDO_ITEM_PRODUTO", "PEDIDO_ITEM", value);
                 }
             }
         }

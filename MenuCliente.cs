@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace GRC
 {
-    public partial class Cliente : Form
+    public partial class MenuCliente : Form
     {
-        public Cliente()
+        public MenuCliente()
         {
             InitializeComponent();
         }
