@@ -109,11 +109,24 @@ namespace GRC
         {
             GRCEntities db = new GRCEntities();
 
+            if (lblCliente.Text == "Nenhum cliente selecionado")
+            {
+                MessageBox.Show("Necessário selecionar um cliente");
+                return;
+            }
+            if (dtItems.Rows.Count == 0)
+            {
+                MessageBox.Show("Necessário adicionar pelo menos um produto ao pedido.");
+                return;
+            }
+
             try
             {
                 PEDIDO p = new PEDIDO();
                 p.CLIENTE = db.CLIENTE.First(c => c.CODIGO == this.codigoCliente);
                 p.DATA = DateTime.Now;
+                p.VALOR_TOTAL = Convert.ToDecimal(lblTotalPedido.Text);
+
                 db.AddToPEDIDO(p);
 
                 foreach (DataGridViewRow row in dtItems.Rows)
@@ -130,6 +143,16 @@ namespace GRC
                 }
 
                 db.SaveChanges();
+                
+                //limpa os campos
+                txtCPF.Text = String.Empty;
+                txtCodigoProduto.Text = String.Empty;
+                for (int i = 0; i < dtItems.Rows.Count; i++)
+                {
+                    dtItems.Rows.RemoveAt(i);
+                }
+                lblTotalPedido.Text = "0";
+
                 MessageBox.Show("Pedido salvo com sucesso.");
             }
             catch (Exception ex)

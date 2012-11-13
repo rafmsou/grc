@@ -34,11 +34,13 @@
             this.Label3 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(21, 272);
+            this.btnEnviar.Location = new System.Drawing.Point(155, 300);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(99, 23);
             this.btnEnviar.TabIndex = 47;
@@ -49,24 +51,24 @@
             // Label8
             // 
             this.Label8.AutoSize = true;
-            this.Label8.Font = new System.Drawing.Font("Arial Black", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.Location = new System.Drawing.Point(12, 9);
+            this.Label8.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label8.Location = new System.Drawing.Point(172, 59);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(528, 50);
+            this.Label8.Size = new System.Drawing.Size(393, 34);
             this.Label8.TabIndex = 46;
             this.Label8.Text = "CADASTRO DE PRODUTOS";
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(73, 203);
+            this.txtValor.Location = new System.Drawing.Point(233, 256);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(160, 20);
-            this.txtValor.TabIndex = 42;
+            this.txtValor.TabIndex = 3;
             // 
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(18, 210);
+            this.Label3.Location = new System.Drawing.Point(152, 263);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(49, 13);
             this.Label3.TabIndex = 35;
@@ -75,7 +77,7 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(18, 156);
+            this.Label1.Location = new System.Drawing.Point(152, 227);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(75, 13);
             this.Label1.TabIndex = 33;
@@ -83,16 +85,34 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(99, 149);
+            this.txtDescricao.Location = new System.Drawing.Point(233, 220);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(500, 20);
-            this.txtDescricao.TabIndex = 32;
+            this.txtDescricao.Size = new System.Drawing.Size(349, 20);
+            this.txtDescricao.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(152, 188);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "CODIGO:";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(233, 185);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(160, 20);
+            this.txtCodigo.TabIndex = 1;
             // 
             // CadastroProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(731, 492);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.Label8);
             this.Controls.Add(this.txtValor);
@@ -114,5 +134,7 @@
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.TextBox txtCodigo;
     }
 }

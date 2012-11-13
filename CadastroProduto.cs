@@ -37,13 +37,14 @@ namespace GRC
             {
                 prod.DESCRICAO = txtDescricao.Text;
                 prod.VALOR = Convert.ToDecimal(txtValor.Text);
+                prod.CODIGO = Convert.ToInt32(txtCodigo.Text);
 
                 db.AddToPRODUTO(prod);
                 db.SaveChanges();
                 MessageBox.Show("Produto salvo com sucesso.");
                 txtDescricao.Text = String.Empty;
                 txtValor.Text = String.Empty;
-
+                txtCodigo.Text = String.Empty;
             }
             catch (Exception ex)
             {
